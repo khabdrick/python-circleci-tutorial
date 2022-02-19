@@ -3,15 +3,15 @@ jobs:
   build:
     docker:
       - image: python:3.8
-  steps:
+    steps:
       - checkout
 
       - run:
-        name: Run unit tests
-        command: |
-          python3 -m venv venv
-          . venv/bin/activate
-          python test_main.py
+          name: Run unit tests
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            python test_main.py
       - setup_remote_docker
         
 
